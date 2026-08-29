@@ -32,13 +32,22 @@
             TestConditionnel.logique();
 
             //Affichage variable
-            lol.affichageVariable();
+            //lol.affichageVariable();
 
             //Affichage exo 8
-            lol.exercice8();
+            //lol.exercice8();
 
             //Using console read/write
-            AffichageConsole.demandePrenom();
+            //AffichageConsole.demandePrenom();
+
+            //Conditions
+            Console.WriteLine("Conditions : ");
+            //Conditions.condition();
+            //Conditions.logique();
+            //Conditions.calculCinquante();
+            //Conditions.nombre();
+            //Conditions.trololo();
+            //Conditions.test();
         }
     }
 }
