@@ -55,6 +55,8 @@
             //AdressVariable.TestUnsafe();
             //input caractere
             //Answer.writeChar();
+            //Photocopie
+            Reprographie.reprographie();
         }
     }
 }
