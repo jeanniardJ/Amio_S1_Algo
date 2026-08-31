@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+          
+
             Console.WriteLine(Math.Sqrt(64));
 
             int variableInt = 36;
@@ -41,13 +43,16 @@
             //AffichageConsole.demandePrenom();
 
             //Conditions
-            Console.WriteLine("Conditions : ");
+            //Console.WriteLine("Conditions : ");
             //Conditions.condition();
             //Conditions.logique();
             //Conditions.calculCinquante();
             //Conditions.nombre();
             //Conditions.trololo();
             //Conditions.test();
+            Console.WriteLine("FindUpNumber : ");
+            //FindUpNumber.findUpNumber();
+            Class1.TestUnsafe();
         }
     }
 }
