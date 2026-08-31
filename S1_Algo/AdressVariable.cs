@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace S1_Algo
 {
-    internal  class Class1
+    internal  class AdressVariable
     {
         public static unsafe void TestUnsafe()
         {

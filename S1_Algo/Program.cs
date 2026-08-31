@@ -50,9 +50,11 @@
             //Conditions.nombre();
             //Conditions.trololo();
             //Conditions.test();
-            Console.WriteLine("FindUpNumber : ");
+            //Console.WriteLine("FindUpNumber : ");
             //FindUpNumber.findUpNumber();
-            Class1.TestUnsafe();
+            //AdressVariable.TestUnsafe();
+            //input caractere
+            //Answer.writeChar();
         }
     }
 }
