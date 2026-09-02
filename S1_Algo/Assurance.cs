@@ -15,6 +15,8 @@ namespace S1_Algo
             int nbrAccidents;
             int ageOfYearsOfEnsurance;
 
+
+
             Console.WriteLine("Entrez votre age : ");
             age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Entrez le nombre d'années de permis : ");

@@ -14,14 +14,16 @@ namespace S1_Algo
 
             int nombre = Convert.ToInt32(Console.ReadLine());
 
-            if (nombre % 2 == 0)
-            {
-                Console.WriteLine("Le nombre " + nombre + " est pair.");
-            }
-            else
-            {
-                Console.WriteLine("Le nombre " + nombre + " est impair.");
-            }
+            //if (nombre % 2 == 0)
+            //{
+            //    Console.WriteLine("Le nombre " + nombre + " est pair.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Le nombre " + nombre + " est impair.");
+            //}
+
+            Console.WriteLine($"Le nombre {nombre} est {(nombre % 2 == 0 ? "pair" : "impair")}.");
         }
     }
 }

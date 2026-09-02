@@ -1,62 +1,44 @@
-﻿namespace S1_Algo
+﻿using System.Diagnostics;
+using System.Globalization;
+
+namespace S1_Algo
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-          
 
-            Console.WriteLine(Math.Sqrt(64));
+            Console.WriteLine("Hello, World!");
+            while (true)
+            {
+                ChoixExo();
+                Console.WriteLine("Voulez-vous continuer ? (O/N)");
+                string inputContinue = Console.ReadLine();
+                if (inputContinue.ToUpper() != "O")
+                {
+                    break;
+                }
+            }
+        }
+        static void ChoixExo()
+        {
+            Console.WriteLine("Choisissez un exercice de 1 à .... : ");
+            int inputChoix = Convert.ToInt32(Console.ReadLine());
 
-            int variableInt = 36;
-            float variableFloat = 1.0f;
-            bool variableBool = false;
-            String variableString = "dsfkldnsfl";
-            char variableChar = '"';
+            switch (inputChoix)
+            {
+                case 1:
+                    Console.WriteLine("Exercice pair ou impair");
+                    Modulo.modulo();
+                    break;
+                case 2:
 
+                    break;
+                default:
+                    Console.WriteLine("Aucun exercice choisi");
 
-            Console.Write("Hello, World! : \n" +
-                "variable Int : " + variableInt + "\n" +
-                "variable float : " + variableFloat + "\n");
-
-            //Méthode static
-            Bordel.methodeDeCalcul();
-
-            //Méthode appel par l'objet
-            Bordel lol = new Bordel();
-            lol.affichageCalcul();
-            lol.affichageText();
-
-            //Conditionnelle
-            TestConditionnel.condition();
-
-            //Logique ||
-            TestConditionnel.logique();
-
-            //Affichage variable
-            //lol.affichageVariable();
-
-            //Affichage exo 8
-            //lol.exercice8();
-
-            //Using console read/write
-            //AffichageConsole.demandePrenom();
-
-            //Conditions
-            //Console.WriteLine("Conditions : ");
-            //Conditions.condition();
-            //Conditions.logique();
-            //Conditions.calculCinquante();
-            //Conditions.nombre();
-            //Conditions.trololo();
-            //Conditions.test();
-            //Console.WriteLine("FindUpNumber : ");
-            //FindUpNumber.findUpNumber();
-            //AdressVariable.TestUnsafe();
-            //input caractere
-            //Answer.writeChar();
-            //Photocopie
-            Reprographie.reprographie();
+                    break;
+            }
         }
     }
 }
