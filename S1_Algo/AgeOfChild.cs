@@ -16,27 +16,30 @@ namespace S1_Algo
         {
             Console.WriteLine("Quel âge a l'enfant ?");
             int age = Convert.ToInt32(Console.ReadLine());
+            string category = "Non autorisé";
 
-            if (age >= 6 || age <= 7)
+            if (age >= 6 && age <= 7)
             {
-                Console.WriteLine("Poussin");
+                category = "Poussin";
             }
-            else if (age >= 8 || age <= 9)
+            else if (age >= 8 && age <= 9)
             {
-                Console.WriteLine("Pupille");
+                category = "Pupille";
             }
-            else if (age >= 10 || age <= 11)
+            else if (age >= 10 && age <= 11)
             {
-                Console.WriteLine("Minime");
+                category = "Minime";
             }
             else if (age >= 12)
             {
-                Console.WriteLine("Cadet");
+                category = "Cadet";
             }
             else
             {
-                Console.WriteLine("Hors catégorie");
+                category = "Hors catégorie";
             }
+
+            Console.WriteLine($"La catégorie de l'enfant est : {category}");
         }
     }
 }
