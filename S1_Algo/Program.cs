@@ -82,17 +82,19 @@ namespace S1_Algo
                     ProduitOfNbr.produitIfPositiveNegative();
                     break;
                 case 6:
-
+                    Answer.writeChar();
                     break;
                 case 7:
-
+                    AgeOfChild.ageOfChild();
                     break;
                 case 8:
-
+                    Zorglub.impot();
                     break;
                 case 9:
+                    Reprographie.reprographie();
                     break;
                 case 10:
+                    Assurance.tarif();
                     break;
                 case 11:
                     break;
