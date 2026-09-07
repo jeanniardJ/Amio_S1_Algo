@@ -15,9 +15,9 @@ namespace S1_Algo
 
                 Console.WriteLine("Voulez-vous continuer ? (O/N)");
 
-                string inputContinue = Console.ReadLine();
+                char inputContinue = Console.ReadKey().KeyChar;
 
-                if (inputContinue.ToUpper() != "O")
+                if (inputContinue!= 'o' && inputContinue != 'O')
                 {
                     break;
                 }

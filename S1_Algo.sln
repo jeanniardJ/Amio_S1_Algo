@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S1_Algo", "S1_Algo\S1_Algo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHello", "ConsoleHello\ConsoleHello.csproj", "{508CD504-11B9-417F-8888-D283CB89D209}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eval_Algo_Finale_CDA13", "Eval_Algo_Finale_CDA13\Eval_Algo_Finale_CDA13.csproj", "{ABDFDF39-0D6A-41F3-A8E9-6F7A43A0B7C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{508CD504-11B9-417F-8888-D283CB89D209}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{508CD504-11B9-417F-8888-D283CB89D209}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{508CD504-11B9-417F-8888-D283CB89D209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDFDF39-0D6A-41F3-A8E9-6F7A43A0B7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDFDF39-0D6A-41F3-A8E9-6F7A43A0B7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDFDF39-0D6A-41F3-A8E9-6F7A43A0B7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDFDF39-0D6A-41F3-A8E9-6F7A43A0B7C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

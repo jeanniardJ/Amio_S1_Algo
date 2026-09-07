@@ -15,7 +15,17 @@
 
             //Cube.affichageCubeDouble();
 
-            Cercle.calculPerimCercle();
+            //Cercle.calculPerimCercle();
+
+            void MaProcedure(string chaine, int nb)
+            {
+                for (int i = 0; i <= nb; i++)
+                {
+                    Console.Write(chaine);
+                }
+            }
+
+            MaProcedure("toto", 3);
         }
     }
 }
