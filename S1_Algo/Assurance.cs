@@ -14,8 +14,7 @@ namespace S1_Algo
             int yearsOfPermit;
             int nbrAccidents;
             int ageOfYearsOfEnsurance;
-
-
+            int points = 0;
 
             Console.WriteLine("Entrez votre age : ");
             age = Convert.ToInt32(Console.ReadLine());
@@ -26,94 +25,164 @@ namespace S1_Algo
             Console.WriteLine("Entrez le nombre d'années d'assurance : ");
             ageOfYearsOfEnsurance = Convert.ToInt32(Console.ReadLine());
 
-            //tarif vert, tarif bleu, tarif orange, tarif rouge
+            // tarif bleu, tarif vert, tarif orange, tarif rouge
+            // age < ou > 25
+            // nombre d'années de permis < ou > 2
+            // nombre d'accidents 0, 1, 2
 
-            if (age < 25)
+            if (ageOfYearsOfEnsurance >= 5)
             {
-                if (yearsOfPermit < 2 && nbrAccidents == 0)
-                {
-                    if (ageOfYearsOfEnsurance >= 5)
-                    {
-                        Console.WriteLine("Tarif orange");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Tarif rouge");
-                    }
-                }
-                else if (yearsOfPermit >= 2)
-                {
-                    if (nbrAccidents == 0)
-                    {
+                points++;
 
-                        if (ageOfYearsOfEnsurance >= 5)
-                        {
-                            Console.WriteLine("Tarif vert");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Tarif orange");
-                        }
-                    }
-                    else if (nbrAccidents == 1)
-                    {
-                        if(ageOfYearsOfEnsurance >= 5)
-                        {
-                            Console.WriteLine("Tarif orange");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Tarif rouge");
-                        }
-                    }
-                    else
-                    {
-                        Assurance.messageOfRefu();
-                    }
-                }
-                else
+                if (age >= 25)
                 {
-                    Assurance.messageOfRefu();
+                    points++;
+                }
+
+                if (yearsOfPermit >= 2)
+                {
+                    points++;
+                }
+
+                if (nbrAccidents == 0)
+                {
+                    points++;
+                }
+                else if (nbrAccidents == 1)
+                {
+                    points--;
                 }
             }
-            else if (age >= 25)
+            else
             {
-                if (yearsOfPermit >= 2 && nbrAccidents == 0)
+                if (age >= 25)
                 {
-                    Console.WriteLine("Tarif vert");
+                    points++;
                 }
-                else if (yearsOfPermit >= 2 && nbrAccidents == 1)
-                {
-                    if (ageOfYearsOfEnsurance >= 5)
-                    {
-                        Console.WriteLine("Tarif vert");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Tarif orange");
-                    }
-                }
-                else if (yearsOfPermit >= 2 && nbrAccidents == 2)
-                {
 
-                    if(ageOfYearsOfEnsurance >= 5)
-                    {
-                        Console.WriteLine("Tarif orange");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Tarif rouge");
-                    }
-                }
-                else
+                if (yearsOfPermit >= 2)
                 {
-                    Assurance.messageOfRefu();
+                    points++;
+                }
+
+                if (nbrAccidents == 0)
+                {
+                    points++;
+                }
+                else if (nbrAccidents >= 1)
+                {
+                    points--;
                 }
             }
-        }
-        private static void messageOfRefu()
-        {
-            Console.WriteLine("Refusé");
+
+            if (points == 4)
+            {
+                Console.WriteLine("Tarif vert");
+            }
+            else if (points == 3)
+            {
+                Console.WriteLine("Tarif bleu");
+            }
+            else if (points == 2)
+            {
+                Console.WriteLine("Tarif orange");
+            }
+            else if (points == 1)
+            {
+                Console.WriteLine("Tarif rouge");
+            }
+            else
+            {
+                Console.WriteLine("Refusé");
+            }
+
+            //    if (age < 25)
+            //    {
+            //        if (yearsOfPermit < 2 && nbrAccidents == 0)
+            //        {
+            //            if (ageOfYearsOfEnsurance >= 5)
+            //            {
+            //                Console.WriteLine("Tarif orange");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Tarif rouge");
+            //            }
+            //        }
+            //        else if (yearsOfPermit >= 2)
+            //        {
+            //            if (nbrAccidents == 0)
+            //            {
+
+            //                if (ageOfYearsOfEnsurance >= 5)
+            //                {
+            //                    Console.WriteLine("Tarif vert");
+            //                }
+            //                else
+            //                {
+            //                    Console.WriteLine("Tarif orange");
+            //                }
+            //            }
+            //            else if (nbrAccidents == 1)
+            //            {
+            //                if(ageOfYearsOfEnsurance >= 5)
+            //                {
+            //                    Console.WriteLine("Tarif orange");
+            //                }
+            //                else
+            //                {
+            //                    Console.WriteLine("Tarif rouge");
+            //                }
+            //            }
+            //            else
+            //            {
+            //                Assurance.messageOfRefu();
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Assurance.messageOfRefu();
+            //        }
+            //    }
+            //    else if (age >= 25)
+            //    {
+            //        if (yearsOfPermit >= 2 && nbrAccidents == 0)
+            //        {
+            //            Console.WriteLine("Tarif vert");
+            //        }
+            //        else if (yearsOfPermit >= 2 && nbrAccidents == 1)
+            //        {
+            //            if (ageOfYearsOfEnsurance >= 5)
+            //            {
+            //                Console.WriteLine("Tarif vert");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Tarif orange");
+            //            }
+            //        }
+            //        else if (yearsOfPermit >= 2 && nbrAccidents == 2)
+            //        {
+
+            //            if(ageOfYearsOfEnsurance >= 5)
+            //            {
+            //                Console.WriteLine("Tarif orange");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Tarif rouge");
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Assurance.messageOfRefu();
+            //        }
+            //    }
+            //}
+            //private static void messageOfRefu()
+            //{
+            //    Console.WriteLine("Refusé");
+            //}
         }
     }
 }

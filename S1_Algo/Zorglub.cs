@@ -20,9 +20,7 @@
 
             sexe = Console.ReadKey().KeyChar.ToString().ToUpper();
 
-            imposable = (sexe == "H" && age >= 20) || (sexe == "F" && age >= 18 && age <= 35) ? "Vous êtes imposable" : "Vous n'êtes pas imposable";    
-
-            Console.WriteLine($"\n{imposable}");
+            Console.WriteLine($"\n{(((sexe == "H") && age >= 20) || (sexe == "F" && age >= 18 && age <= 35) ? "Vous êtes imposable" : "Vous n'êtes pas imposable")}");
         }
     }
 }
