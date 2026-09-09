@@ -56,13 +56,18 @@ namespace S1_Algo
             Console.WriteLine($"Candidat C : {scoreCandidateC}% - {(isPercentCandidateC ? "Éligible" : "Non éligible")}");
             Console.WriteLine($"Candidat D : {scoreCandidateD}% - {(isPercentCandidateD ? "Éligible" : "Non éligible")}");
 
+            // Correction de la condition pour vérifier si le candidat A a remporté l'élection
             if (scoreCandidateA > 50)
             {
                 Console.WriteLine("Le candidat A a remporté l'élection avec " + scoreCandidateA + "% des voix.");
             }
-            else if (isPercentCandidateA)
+            else if (scoreCandidateB > 50 || scoreCandidateC > 50 || scoreCandidateD > 50)
             {
-                Console.WriteLine("Le candidat A est éligible pour le second tour avec " + scoreCandidateA + "% des voix.");
+                Console.WriteLine("Un autre candidat a remporté l'élection avec plus de 50% des voix.");
+            }
+            else if (scoreCandidateA > scoreCandidateB && scoreCandidateA > scoreCandidateC && scoreCandidateA > scoreCandidateD)
+            {
+                Console.WriteLine("Le candidat A est en tête avec " + scoreCandidateA + "% des voix, mais aucun candidat n'a obtenu plus de 50% des voix. Un second tour est nécessaire.");
             }
             else
             {
