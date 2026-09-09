@@ -101,9 +101,10 @@ namespace S1_Algo
                     PredictTheFuture.PredictTheClock();
                     break;
                 case 12:
-                    PredictTheFuture.PredictTheClock();
+                    GeneralElections.electionsLegislatives();
                     break;
                 case 13:
+                    DateVerification.dateVerification();
                     break;
                 default:
                     Console.WriteLine("Aucun exercice choisi");

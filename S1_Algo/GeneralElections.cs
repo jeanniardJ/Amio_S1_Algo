@@ -10,29 +10,63 @@ namespace S1_Algo
     {
         public static void electionsLegislatives()
         {
-            string result = "Favorable";
-            double[] scoreCandidate = new double[4];
+            double scoreCandidateA = 0;
+            double scoreCandidateB = 0;
+            double scoreCandidateC = 0;
+            double scoreCandidateD = 0;
 
-            for (int i = 0; i <= 3; i++)
+            bool isPercentCandidateA;
+            bool isPercentCandidateB;
+            bool isPercentCandidateC;
+            bool isPercentCandidateD;
+
+            Console.WriteLine("Entrez le nombre de voix du candidat A : ");
+
+            scoreCandidateA = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Entrez le nombre de voix du candidat B : ");
+
+            scoreCandidateB = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Entrez le nombre de voix candidat C : ");
+
+            scoreCandidateC = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Entrez le nombre de voix candidat D : ");
+
+            scoreCandidateD = Convert.ToDouble(Console.ReadLine());
+
+            //Convertir les scores en pourcentage
+            double totalVotes = scoreCandidateA + scoreCandidateB + scoreCandidateC + scoreCandidateD;
+
+            scoreCandidateA = (scoreCandidateA / totalVotes) * 100;
+            scoreCandidateB = (scoreCandidateB / totalVotes) * 100;
+            scoreCandidateC = (scoreCandidateC / totalVotes) * 100;
+            scoreCandidateD = (scoreCandidateD / totalVotes) * 100;
+
+            isPercentCandidateA = scoreCandidateA > 12.5;
+            isPercentCandidateB = scoreCandidateB > 12.5;
+            isPercentCandidateC = scoreCandidateC > 12.5;
+            isPercentCandidateD = scoreCandidateD > 12.5;
+
+            Console.WriteLine("Résultats des élections législatives :");
+
+            Console.WriteLine($"Candidat A : {scoreCandidateA}% - {(isPercentCandidateA ? "Éligible" : "Non éligible")}");
+            Console.WriteLine($"Candidat B : {scoreCandidateB}% - {(isPercentCandidateB ? "Éligible" : "Non éligible")}");
+            Console.WriteLine($"Candidat C : {scoreCandidateC}% - {(isPercentCandidateC ? "Éligible" : "Non éligible")}");
+            Console.WriteLine($"Candidat D : {scoreCandidateD}% - {(isPercentCandidateD ? "Éligible" : "Non éligible")}");
+
+            if (scoreCandidateA > 50)
             {
-                Console.WriteLine($"Entrez le score du candidat {i + 1} :");
-                scoreCandidate[i] = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Le candidat A a remporté l'élection avec " + scoreCandidateA + "% des voix.");
             }
-            
-            //Si un candidat obtient plus de 50% des voix, il est élu.
-            //Si aucun candidat n'obtient plus de 50% des voix, un second tour est organisé entre les candidats ayant obtenu au moins 12,5% des voix au premier tour.
-
-            for (int i = 0; i <= 3; i++)
+            else if (isPercentCandidateA)
             {
-                if (scoreCandidate[i] > 50)
-                {
-                    result = $"Le candidat {i + 1} est élu.";
-                    break;
-                }
-                else
-                {
-                    //TODO: Implement second round logic
-                }
+                Console.WriteLine("Le candidat A est éligible pour le second tour avec " + scoreCandidateA + "% des voix.");
+            }
+            else
+            {
+                Console.WriteLine("Le candidat A n'est pas éligible pour le second tour avec " + scoreCandidateA + "% des voix.");
             }
         }
     }
