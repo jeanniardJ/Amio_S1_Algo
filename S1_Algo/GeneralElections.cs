@@ -8,6 +8,10 @@ namespace S1_Algo
 {
     internal class GeneralElections
     {
+        /*
+         * @brief Cette méthode permet de calculer les résultats des élections législatives pour quatre candidats.
+         * 
+         */
         public static void electionsLegislatives()
         {
             double scoreCandidateA = 0;

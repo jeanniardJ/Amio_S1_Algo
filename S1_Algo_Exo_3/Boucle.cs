@@ -72,5 +72,30 @@ namespace S1_Algo_Exo_3
                 Console.WriteLine(i);
             }
         }
+
+        public static void ValueDecrementExo()
+        {
+            int x = 0;
+            Console.WriteLine("Affichage de tous les nombres de 0 à -20 :");
+            Console.WriteLine("While:");
+
+            while (x > -21)
+            {
+                Console.WriteLine(x);
+                x--;
+            }
+
+            x = 0;
+
+            Console.WriteLine("Do While:");
+            do
+            {
+                Console.WriteLine(x);
+                x--;
+            }
+            while (x > -21);
+
+
+        }
     }
 }

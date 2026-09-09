@@ -22,9 +22,10 @@ namespace S1_Algo
             //Verifier si l'année est bissextile
             bool isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
             //verifier de l'année est valide
-            if (year < 1)
+            //Vérification du jour en fonction du mois et de l'année
+            if (day < 1 || day > 31)
             {
-                Console.WriteLine("Année invalide.");
+                Console.WriteLine("Jour invalide.");
                 return;
             }
 
@@ -35,10 +36,9 @@ namespace S1_Algo
                 return;
             }
 
-            //Vérification du jour en fonction du mois et de l'année
-            if (day < 1 || day > 31)
+            if (year < 1)
             {
-                Console.WriteLine("Jour invalide.");
+                Console.WriteLine("Année invalide.");
                 return;
             }
 
