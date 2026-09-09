@@ -17,6 +17,7 @@ namespace S1_Algo
 
                 char inputContinue = Console.ReadKey().KeyChar;
 
+                
                 if (inputContinue!= 'o' && inputContinue != 'O')
                 {
                     break;
@@ -100,6 +101,7 @@ namespace S1_Algo
                     PredictTheFuture.PredictTheClock();
                     break;
                 case 12:
+                    PredictTheFuture.PredictTheClock();
                     break;
                 case 13:
                     break;

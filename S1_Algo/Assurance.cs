@@ -14,7 +14,7 @@ namespace S1_Algo
             int yearsOfPermit;
             int nbrAccidents;
             int ageOfYearsOfEnsurance;
-            int points = 0;
+            int points = 1;
 
             Console.WriteLine("Entrez votre age : ");
             age = Convert.ToInt32(Console.ReadLine());
@@ -30,71 +30,62 @@ namespace S1_Algo
             // nombre d'années de permis < ou > 2
             // nombre d'accidents 0, 1, 2
 
-            if (ageOfYearsOfEnsurance >= 5)
+            if (age > 25)
             {
                 points++;
-
-                if (age >= 25)
-                {
-                    points++;
-                }
-
-                if (yearsOfPermit >= 2)
-                {
-                    points++;
-                }
-
-                if (nbrAccidents == 0)
-                {
-                    points++;
-                }
-                else if (nbrAccidents == 1)
-                {
-                    points--;
-                }
-            }
-            else
-            {
-                if (age >= 25)
-                {
-                    points++;
-                }
-
-                if (yearsOfPermit >= 2)
-                {
-                    points++;
-                }
-
-                if (nbrAccidents == 0)
-                {
-                    points++;
-                }
-                else if (nbrAccidents >= 1)
-                {
-                    points--;
-                }
             }
 
-            if (points == 4)
+            if (yearsOfPermit > 2)
             {
-                Console.WriteLine("Tarif vert");
+                points++;
             }
-            else if (points == 3)
+
+            points -= nbrAccidents;
+
+            if (ageOfYearsOfEnsurance > 5 && points > 0)
             {
-                Console.WriteLine("Tarif bleu");
+                points++;
             }
-            else if (points == 2)
+
+            switch (points)
             {
-                Console.WriteLine("Tarif orange");
+                case 4:
+                    Console.WriteLine("Tarif vert");
+                    break;
+                case 3:
+                    Console.WriteLine("Tarif bleu");
+                    break;
+                case 2:
+                    Console.WriteLine("Tarif orange");
+                    break;
+                case 1:
+                    Console.WriteLine("Tarif rouge");
+                    break;
+                default:
+                    Console.WriteLine("Refusé");
+                    break;
             }
-            else if (points == 1)
-            {
-                Console.WriteLine("Tarif rouge");
-            }
-            else
-            {
-                Console.WriteLine("Refusé");
-            }
+
+            //if (points == 4)
+            //{
+            //    Console.WriteLine("Tarif vert");
+            //}
+            //else if (points == 3)
+            //{
+            //    Console.WriteLine("Tarif bleu");
+            //}
+            //else if (points == 2)
+            //{
+            //    Console.WriteLine("Tarif orange");
+            //}
+            //else if (points == 1)
+            //{
+            //    Console.WriteLine("Tarif rouge");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Refusé");
+            //}
 
             //    if (age < 25)
             //    {
