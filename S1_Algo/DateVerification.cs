@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace S1_Algo
 {
+    /**
+     * This class is used to verify if a date is valid or not.
+     * It takes the day, month and year as input from the user and checks if the date is valid or not.
+     * It also checks for leap years.
+     */
     internal class DateVerification
     {
         public static void dateVerification()
@@ -21,54 +26,32 @@ namespace S1_Algo
             //Une année est bissextile si elle est divisible par 4, mais pas par 100, sauf si elle est divisible par 400.
             //Verifier si l'année est bissextile
             bool isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-            //verifier de l'année est valide
-            //Vérification du jour en fonction du mois et de l'année
-            if (day < 1 || day > 31)
-            {
-                Console.WriteLine("Jour invalide.");
-                return;
-            }
 
-            //Vérification du mois
-            if (month < 1 || month > 12)
-            {
-                Console.WriteLine("Mois invalide.");
-                return;
-            }
+            bool isValidDate = month >= 1 && month <= 12 && day >= 1 && day <= 31;
 
-            if (year < 1)
+            if (isValidDate)
             {
-                Console.WriteLine("Année invalide.");
-                return;
-            }
-            else if (month == 2)
-            {
-                // Vérification du jour pour le mois de février
-                if (isLeapYear && day > 29)
+                if (month == 4 || month == 6 || month == 9 || month == 11)
                 {
-                    Console.WriteLine("Jour invalide pour le mois de février d'une année bissextile.");
-                    return;
+                    isValidDate = day <= 30;
                 }
-                else if(!isLeapYear && day > 28)
+                else
                 {
-                    Console.WriteLine("Jour invalide pour le mois de février d'une année non bissextile.");
-                    return;
-                }
-            }
-            else
-            {
-                if(month == 4 || month == 6 || month == 9 || month == 11)
-                {
-                    // Vérification du jour pour les mois avec 30 jours
-                    if (day > 30)
+                    if (month == 2)
                     {
-                        Console.WriteLine("Jour invalide pour le mois choisi.");
-                        return;
+                        if (isLeapYear)
+                        {
+                            isValidDate = day <= 29;
+                        }
+                        else
+                        {
+                            isValidDate = day <= 28;
+                        }
                     }
                 }
             }
 
-            Console.WriteLine($"La date {day:D2}/{month:D2}/{year} est valide.");
+            Console.WriteLine(isValidDate ? "La date est valide." : "La date n'est pas valide.");
         }
     }
 }

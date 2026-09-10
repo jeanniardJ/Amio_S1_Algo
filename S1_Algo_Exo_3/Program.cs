@@ -11,20 +11,21 @@
             Console.WriteLine("Hello, World of exo three!");
             //Boucle.DoWhileForExo();
             //Boucle.BoucleTwoOfTwoExo();
-            //Console.WriteLine("\n");
+            Console.WriteLine("\n");
+            IntegerSumCalculator.calculateSum();
             //Boucle.ValueDecrementExo();
             //Console.WriteLine("\n");
             //MultiplcationTable.ShowMultiplcationTable();
             //Console.WriteLine("\n");
             //BetweenOneAndThree.InputBetweenOneAndThree();
-            Console.WriteLine("\n");
-            MonthNumberValidator.validateMonthNumberWhile();
-            Console.WriteLine("\n");
-            MonthNumberValidator.validateMonthNumberDoWhile();
-            Console.WriteLine("\n");
-            Factorial.CalculateFactorial();
-            Console.WriteLine("\n");
-            FizzBuzz.RunFizzBuzz();
+            //Console.WriteLine("\n");
+            //MonthNumberValidator.validateMonthNumberWhile();
+            //Console.WriteLine("\n");
+            //MonthNumberValidator.validateMonthNumberDoWhile();
+            //Console.WriteLine("\n");
+            //Factorial.CalculateFactorial();
+            //Console.WriteLine("\n");
+            //FizzBuzz.RunFizzBuzz();
         }
     }
 }
