@@ -13,11 +13,15 @@
             //Boucle.BoucleTwoOfTwoExo();
             Console.WriteLine("\n");
             IntegerSumCalculator.calculateSum();
+            Console.WriteLine("\n");
+            EvenNumbersSumCalculator.CalculateSumOfFirstNEvenNumbers();
             //Boucle.ValueDecrementExo();
             //Console.WriteLine("\n");
             //MultiplcationTable.ShowMultiplcationTable();
             //Console.WriteLine("\n");
             //BetweenOneAndThree.InputBetweenOneAndThree();
+            Console.WriteLine("\n");
+            MultipleSumsCalculator.calculateSum();
             //Console.WriteLine("\n");
             //MonthNumberValidator.validateMonthNumberWhile();
             //Console.WriteLine("\n");
