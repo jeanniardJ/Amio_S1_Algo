@@ -3,6 +3,9 @@ using System.Globalization;
 
 namespace S1_Algo
 {
+    /**
+     * The main entry point for the application.
+     */
     internal class Program
     {
         static void Main(string[] args)
@@ -24,6 +27,10 @@ namespace S1_Algo
                 }
             }
         }
+
+        /**
+         * This method allows the user to choose an exercise to execute.
+         */
         static void ChoixExo()
         {
             int input;

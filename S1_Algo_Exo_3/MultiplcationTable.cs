@@ -20,6 +20,8 @@ namespace S1_Algo_Exo_3
 
             nbrInput = Console.ReadKey().KeyChar - '0';
 
+            Console.WriteLine("\n");
+
             for (int i = 1; i <= 10; i++)
             {
                 Console.WriteLine($"{nbrInput} x {i} = {nbrInput * i}");
