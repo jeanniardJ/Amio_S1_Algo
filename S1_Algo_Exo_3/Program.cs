@@ -7,7 +7,10 @@
             Console.WriteLine("Hello, World of exo three!");
             Boucle.DoWhileForExo();
             Boucle.BoucleTwoOfTwoExo();
+            Console.WriteLine("\n");
             Boucle.ValueDecrementExo();
+            Console.WriteLine("\n");
+            MultiplcationTable.ShowMultiplcationTable();
         }
     }
 }

@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace S1_Algo_Exo_3
 {
+    /**
+     * The Boucle class contains methods that demonstrate the use of different types of loops in C#.
+     * It includes methods to display numbers in various ranges using while, do-while, and for loops.
+     */
     internal class Boucle
     {
+
         public static void DoWhileForExo()
         {
             int x = 1;
@@ -88,6 +93,7 @@ namespace S1_Algo_Exo_3
             x = 0;
 
             Console.WriteLine("Do While:");
+
             do
             {
                 Console.WriteLine(x);
@@ -95,7 +101,12 @@ namespace S1_Algo_Exo_3
             }
             while (x > -21);
 
+            Console.WriteLine("\nFor:");
 
+            for (x = 0; x > -21; x--)
+            {
+                Console.WriteLine(x);
+            }
         }
     }
 }

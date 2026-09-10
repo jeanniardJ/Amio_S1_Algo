@@ -41,7 +41,6 @@ namespace S1_Algo
                 Console.WriteLine("Année invalide.");
                 return;
             }
-
             else if (month == 2)
             {
                 // Vérification du jour pour le mois de février
