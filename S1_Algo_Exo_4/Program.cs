@@ -11,8 +11,10 @@
             //SumCalculator.ReadTwoIntegers();
             //Console.WriteLine("\n");
             //EvenNumberChecker.GetNumber();
+            //Console.WriteLine("\n");
+            //Console.WriteLine($"La mention de l'utilisateur est {MentionCalculator.GetMention(16)}");
             Console.WriteLine("\n");
-            Console.WriteLine($"La mention de l'utilisateur est {MentionCalculator.GetMention(16)}");
+            Console.WriteLine($"La distance est de {DistanceCalculator.PointDistanceCalculator(5, 2, 6, 5)}");
         }
     }
 }
