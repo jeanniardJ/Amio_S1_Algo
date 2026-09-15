@@ -13,8 +13,18 @@
             //EvenNumberChecker.GetNumber();
             //Console.WriteLine("\n");
             //Console.WriteLine($"La mention de l'utilisateur est {MentionCalculator.GetMention(16)}");
-            Console.WriteLine("\n");
-            Console.WriteLine($"La distance est de {DistanceCalculator.PointDistanceCalculator(5, 2, 6, 5)}");
+            //Console.WriteLine("\n");
+            //Console.WriteLine($"La distance est de {DistanceCalculator.PointDistanceCalculator(5, 2, 6, 5)}");
+            //Console.WriteLine("\n");
+            //Console.WriteLine("Crée une question de type oui/non");
+            //YesNoQuestionHandler.SetQuestion(Console.ReadLine());
+            //Console.WriteLine("Répondé à la question par oui ou non");
+            //YesNoQuestionHandler.AskYesNoQuestion(Console.ReadLine());
+            //Console.WriteLine("\n");
+            //Console.Write("Entree un nombre : ");
+            //PrimeNumberChecker.IsPrimeNumber(int.Parse(Console.ReadLine()));
+            //Console.WriteLine("\n");
+            //BinaryConverter.ConvertToBinary(42);
         }
     }
 }

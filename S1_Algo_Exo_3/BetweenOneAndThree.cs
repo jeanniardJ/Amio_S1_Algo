@@ -15,16 +15,14 @@ namespace S1_Algo_Exo_3
         public static void InputBetweenOneAndThree()
         {
             int x;
-
-            Console.WriteLine("Taper un nombre entier : ");
-
-            x = Convert.ToInt32(Console.ReadLine());
-
-            while (x < 1 || x > 3)
+            do
             {
                 Console.WriteLine("Taper un nombre entier : ");
+
                 x = Convert.ToInt32(Console.ReadLine());
             }
+            while (x < 1 || x > 3);
+
 
             Console.WriteLine("Bravo");
         }
