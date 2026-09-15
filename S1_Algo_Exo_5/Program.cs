@@ -7,7 +7,7 @@
             Console.WriteLine("Hello, World!");
             Console.WriteLine("\n");
             Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
-
+            Console.WriteLine($"{(PalindromeChecker.EstPalindrome("Bonjour") ? "Ce mot est un palindrome" : "Ce mot n'est pas un palindrome")}");
         }
     }
 }

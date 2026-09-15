@@ -29,11 +29,16 @@ namespace S1_Algo_Exo_5
 
         public static bool EstPalindrome(string mot)
         {
-            if (mot == ReverseString(mot))
+            int sizeMot = mot.Length-1;
+            string reverseMot = ReverseString(mot);
+
+            for (int i = 0; i <= sizeMot; i++)
             {
-
+                if (mot[i] != reverseMot[i])
+                {
+                    return false;
+                }
             }
-
 
             return true;
         }
