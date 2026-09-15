@@ -25,6 +25,8 @@
             //PrimeNumberChecker.IsPrimeNumber(int.Parse(Console.ReadLine()));
             //Console.WriteLine("\n");
             //BinaryConverter.ConvertToBinary(42);
+            //Console.WriteLine("\n");
+            //FactorialCalculator.CalculateFactorial(12);
         }
     }
 }
