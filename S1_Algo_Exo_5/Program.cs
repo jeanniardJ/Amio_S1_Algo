@@ -5,9 +5,17 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
+            //Console.WriteLine("\n");
+            //VowelDisplay.DisplayVowels();
+            //Console.WriteLine("\n");
+            //ArrayManager.FillArrays();
+            //Console.WriteLine("\n");
+            //NumberSignCounter.CountPositiveAndNegativeNumbers();
+            //Console.WriteLine("\n");
+            //Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
+            //Console.WriteLine($"{(PalindromeChecker.EstPalindrome("Bonjour") ? "Ce mot est un palindrome" : "Ce mot n'est pas un palindrome")}");
             Console.WriteLine("\n");
-            Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
-            Console.WriteLine($"{(PalindromeChecker.EstPalindrome("Bonjour") ? "Ce mot est un palindrome" : "Ce mot n'est pas un palindrome")}");
+            StringCompressor.CompressString("AAAJSJJAKAKKSAK");
         }
     }
 }
