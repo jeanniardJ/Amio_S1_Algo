@@ -13,8 +13,9 @@
             //NumberSignCounter.CountPositiveAndNegativeNumbers();
             //Console.WriteLine("\n");
             //PriceStatisticsCalculator.CalculateTotalAndAverage();
+            //Console.WriteLine("\n");
+            //ArraySumCalculator.CalculateArraySum();
             Console.WriteLine("\n");
-            ArraySumCalculator.CalculateArraySum();
 
             //Console.WriteLine("\n");
             //Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
