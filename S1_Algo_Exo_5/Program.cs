@@ -12,6 +12,11 @@
             //Console.WriteLine("\n");
             //NumberSignCounter.CountPositiveAndNegativeNumbers();
             //Console.WriteLine("\n");
+            //PriceStatisticsCalculator.CalculateTotalAndAverage();
+            Console.WriteLine("\n");
+            ArraySumCalculator.CalculateArraySum();
+
+            //Console.WriteLine("\n");
             //Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
             //Console.WriteLine($"{(PalindromeChecker.EstPalindrome("Bonjour") ? "Ce mot est un palindrome" : "Ce mot n'est pas un palindrome")}");
             Console.WriteLine("\n");
