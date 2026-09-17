@@ -16,7 +16,7 @@
             //Console.WriteLine("\n");
             //ArraySumCalculator.CalculateArraySum();
             Console.WriteLine("\n");
-
+            FibonacciSequenceGenerator.GenerateFibonacciSequence();
             //Console.WriteLine("\n");
             //Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
             //Console.WriteLine($"{(PalindromeChecker.EstPalindrome("Bonjour") ? "Ce mot est un palindrome" : "Ce mot n'est pas un palindrome")}");
