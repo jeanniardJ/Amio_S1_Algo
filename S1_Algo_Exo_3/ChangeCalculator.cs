@@ -17,13 +17,12 @@ namespace S1_Algo_Exo_3
             int sommeRendre = 0;
             int compteTen = 0;
             int compteFive = 0;
-            int compteOne = 0;
 
             Console.WriteLine("Veuillez rentrer un à un les différent prix : ");
 
             do
             {
-                inputPrixItem = int.Parse(Console.ReadLine());
+                int.TryParse(Console.ReadLine(), out inputPrixItem);
                 sommeSell += inputPrixItem;
             } while (inputPrixItem != 0);
 
@@ -31,7 +30,7 @@ namespace S1_Algo_Exo_3
 
             Console.Write("Montant versé ? : ");
 
-            inputMoney = int.Parse(Console.ReadLine());
+            int.TryParse(Console.ReadLine(), out inputMoney);
 
             //Prendre la valeur inputMoney puis faire inputMoney - sommeSell = qui donne la somme à rendre
             sommeRendre = inputMoney - sommeSell;
@@ -39,25 +38,12 @@ namespace S1_Algo_Exo_3
             //Combien de billets de 10, de 5 et de 1. Il faut compte combien de billets pouvons nous rendre dans
             Console.WriteLine($"Somme à rendre : {sommeRendre}");
             
-            if (sommeRendre % 10 != 0)
-            {
-                compteTen = sommeRendre / 10;//Le nombre de billets de 10 à rendre
-                sommeRendre = sommeRendre % 10;
-            }
-            
-            if (sommeRendre % 5 != 0)
-            {
-                compteFive = sommeRendre / 5;
-                sommeRendre = sommeRendre % 5;
-            }
+            compteTen = sommeRendre / 10;//Le nombre de billets de 10 à rendre
+            sommeRendre = sommeRendre % 10;
+            compteFive = sommeRendre / 5;
+            sommeRendre = sommeRendre % 5;
 
-            if (sommeRendre > 0)
-            {
-                compteOne = sommeRendre / 1;
-                sommeRendre = sommeRendre % 1;
-            }
-
-            Console.WriteLine($"Rendu monaie : \n\t {compteTen} de billet(s) de 10, \n\t {compteFive} de billet(s) de 5, \n\t {compteOne} de billet(s) de 1");
+            Console.WriteLine($"Rendu monaie : \n\t {compteTen} de billet(s) de 10, \n\t {compteFive} de billet(s) de 5, \n\t {sommeRendre} de billet(s) de 1");
         }
     }
 }
