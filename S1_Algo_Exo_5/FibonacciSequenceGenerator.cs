@@ -18,11 +18,11 @@ namespace S1_Algo_Exo_5
             {
                 if (i < 1)
                 {
-                    fibonacciNbrs[i] = 0;
+                    fibonacciNbrs[i] = i;
                 }
                 else if (i < 2)
                 {
-                    fibonacciNbrs[i] = 1;
+                    fibonacciNbrs[i] = i;
                 }
                 else
                 {

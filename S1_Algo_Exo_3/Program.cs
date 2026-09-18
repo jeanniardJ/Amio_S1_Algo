@@ -32,8 +32,10 @@
             //FizzBuzz.RunFizzBuzz();
             //Console.WriteLine("\n");
             //HigherLowerGame.PlayGame();
+            //Console.WriteLine("\n");
+            //ReverseHigherLowerGame.PlayGame();
             Console.WriteLine("\n");
-            ReverseHigherLowerGame.PlayGame();
+            ChangeCalculator.CalculateChange();
         }
     }
 }
