@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace S1_Algo_Exo_4
 {
+    /**
+     * Ecrire et tester une fonction qui, à partir d'un nombre entier passé en paramètre, 
+     * renvoie un booléen égal true à si le nombre est pair et false sinon.
+     */
     internal class EvenNumberChecker
     {
         public static void GetNumber()
