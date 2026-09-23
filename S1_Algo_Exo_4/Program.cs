@@ -20,9 +20,14 @@
             //YesNoQuestionHandler.SetQuestion(Console.ReadLine());
             //Console.WriteLine("Répondé à la question par oui ou non");
             //YesNoQuestionHandler.AskYesNoQuestion(Console.ReadLine());
-            //Console.WriteLine("\n");
-            //Console.Write("Entree un nombre : ");
-            //PrimeNumberChecker.IsPrimeNumber(int.Parse(Console.ReadLine()));
+            Console.WriteLine("\n");
+            Console.Write("Entree un nombre : ");
+            //bool result = PrimeNumberChecker.IsPrimeNumber(int.Parse(Console.ReadLine()));
+            for(int n = 1; n < 101; n++)
+            {
+                bool result = PrimeNumberChecker.IsPrimeNumber(n);
+                Console.WriteLine($"Le nombre {n} {(result ? "est premiere" : "n'est pas premiere")}");
+            }
             //Console.WriteLine("\n");
             //BinaryConverter.ConvertToBinary(42);
             //Console.WriteLine("\n");

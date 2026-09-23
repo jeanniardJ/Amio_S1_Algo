@@ -10,18 +10,24 @@ namespace S1_Algo_Exo_4
     {
         public static bool IsPrimeNumber(int number)
         {
-            if (number < 2)
-            {
-                return false;
-            }
+            bool result = false;
+            int compteur = 0;
 
+            //Si le nombre est divisible au dela de lui même et de 1, il n'est pas un nombre premiere
             for (int i = 1; i <= number; i++)
             {
-                Console.WriteLine($"{number / i}");
-                Console.WriteLine($"{number % 2 == 0}, {number % 2}");
+                if(number % i == 0)
+                {
+                    compteur++;
+                }
             }
 
-            return true;
+            if(compteur < 3)
+            {
+                result = true;
+            }
+
+            return result;
         }
     }
 }
