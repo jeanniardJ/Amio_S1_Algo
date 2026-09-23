@@ -13,6 +13,7 @@ namespace S1_Algo_Exo_5
             string[] noms = inputName();
 
             //Tirer au sort un nom, puit donner la possibiliter à l'user de définir le nombre de nom tirer au sort
+            randomName(noms);
         }
 
         static string[] inputName()
@@ -47,6 +48,11 @@ namespace S1_Algo_Exo_5
             }
 
             return noms;
+        }
+
+        static void randomName(string[] names)
+        {
+
         }
     }
 }
