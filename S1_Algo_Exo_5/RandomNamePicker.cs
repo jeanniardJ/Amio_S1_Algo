@@ -106,7 +106,7 @@ namespace S1_Algo_Exo_5
             {
                 if (verifTable[y] == valeur)
                 {
-                    Console.WriteLine("Nom trouver");
+                    Console.WriteLine("Nom trouver !");
                     return true;
                 }
             }
