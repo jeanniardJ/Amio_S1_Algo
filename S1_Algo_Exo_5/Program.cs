@@ -27,8 +27,13 @@
             //Console.WriteLine("\n");
             //CaesarCipher.EncryptMessage("bonjour et bienvenu en algo, les animaux sont dans un zoo", 3);
             Console.WriteLine("\n");
+
             Console.WriteLine("\n");
-            RandomNamePicker.DrawRandomName();
+            for(int n = 0; n < 1000; n++)
+            {
+                RandomNamePicker.DrawRandomName();
+            }
+            
         }
     }
 }
