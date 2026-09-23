@@ -8,14 +8,11 @@ namespace S1_Algo_Exo_4
 {
     internal class YesNoQuestionHandler
     {
-        public static void SetQuestion(string question)
+        public static string SetQuestion(string question)
         {
-            Console.WriteLine($"{question}");
-        }
+            Console.WriteLine($"{question} (oui/non)");
 
-        public static void AskYesNoQuestion(string answer)
-        {
-            Console.WriteLine($"La réponse à la question est {answer}");
+            return Console.ReadLine();
         }
     }
 }
