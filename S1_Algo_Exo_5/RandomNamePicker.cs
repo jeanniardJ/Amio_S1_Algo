@@ -53,14 +53,10 @@ namespace S1_Algo_Exo_5
 
                     inputNom = Console.ReadLine();
 
-                    for (int y = 0; y < noms.Length; y++)
+                    if (isExiste(noms, inputNom))
                     {
-                        if (noms[y] == inputNom)
-                        {
-                            Console.WriteLine("Ce nom existe déja !");
-                            isFind = true;
-                            break;
-                        }
+                        isFind = true;
+                        break;
                     }
                 }
                 while (isFind);
@@ -81,26 +77,41 @@ namespace S1_Algo_Exo_5
             Random rnd = new();
             string[] nomTirer = new string[nbr];
             string nom;
-            bool isFind = false;
 
             //Verifier que l'utilisateur n'a pas été tirer au sort 2, sinon relancer le tirage au sort
             for (int n = 0; n < nbr; n++)
             {
                 nom = names[rnd.Next(names.Length)];
 
-                for (int y = 0; y < nomTirer.Length; y++)
+                if(isExiste(nomTirer, nom))
                 {
-                    if (nomTirer[y] == nom)
-                    {
-                        Console.WriteLine("Ce nom est déja tirer au sort!");
-                        n = 0;
-                    }
+                    n = 0;
                 }
 
                 nomTirer[n] = nom;
             }
 
             return nomTirer;
+        }
+
+        /// <summary>
+        /// Verifier si la valeur n'existe pas déja dans un tableau donner
+        /// </summary>
+        /// <param name="verifTable"></param>
+        /// <param name="valeur"></param>
+        /// <returns>Boolean</returns>
+        static bool isExiste(string[] verifTable, string valeur)
+        {
+            for (int y = 0; y < verifTable.Length; y++)
+            {
+                if (verifTable[y] == valeur)
+                {
+                    Console.WriteLine("Nom trouver");
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
