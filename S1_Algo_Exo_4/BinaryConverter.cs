@@ -8,7 +8,7 @@ namespace S1_Algo_Exo_4
 {
     internal class BinaryConverter
     {
-        public static void ConvertToBinary(int decimalNumber)
+        public static string ConvertToBinary(int decimalNumber)
         {
             string binaire = "";
 
@@ -19,7 +19,7 @@ namespace S1_Algo_Exo_4
             }
             while (decimalNumber > 0);
 
-            Console.WriteLine($"{binaire}");
+            return binaire;
         }
     }
 }
