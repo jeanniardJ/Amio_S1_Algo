@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S1_Algo_Bonus_Trie", "S1_Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S1_Algo_Bonus_N_Reines", "S1_Algo_Bonus_N_Reines\S1_Algo_Bonus_N_Reines.csproj", "{A23450AC-D93E-4B53-9C02-037E937F0CC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S1_Algo_TestUT", "S1_Algo_TestUT\S1_Algo_TestUT.csproj", "{3C1CD3A1-4BC3-4648-86BC-1BB34CB65957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A23450AC-D93E-4B53-9C02-037E937F0CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A23450AC-D93E-4B53-9C02-037E937F0CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A23450AC-D93E-4B53-9C02-037E937F0CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1CD3A1-4BC3-4648-86BC-1BB34CB65957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1CD3A1-4BC3-4648-86BC-1BB34CB65957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1CD3A1-4BC3-4648-86BC-1BB34CB65957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1CD3A1-4BC3-4648-86BC-1BB34CB65957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
