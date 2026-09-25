@@ -12,8 +12,10 @@ namespace S1_Algo_Bonus_Trie
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
+            //Console.WriteLine("\n");
+            //BubbleSort.SortArray();
             Console.WriteLine("\n");
-            BubbleSort.SortArray();
+            BinarySearchAlgorithm.SearchValue();
         }
 
         //Comprendre et implémenter le tri à bulles
