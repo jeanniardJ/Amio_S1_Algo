@@ -16,15 +16,24 @@ namespace S1_Algo_Exo_5
         /// </summary>
         public static void SortArray()
         {
-            int[] numbers = { 3, 1, 5, 6, 2, 4, 7, 8 };
+            Random random = new Random();
+
+            int[] numbers = Enumerable.Range(1, 50)
+            .OrderBy(x => random.Next())
+            .ToArray();
+
+            Console.WriteLine(string.Join(", ", numbers));
+
             int temp = 0;
 
-            for(int x = 0; x < numbers.Length; x++)
+            for (int x = 0; x < numbers.Length; x++)
             {
-                for(int y = 0; y < numbers.Length-1; y++)
+                for (int y = 0; y < numbers.Length - 1; y++)
                 {
-                    if (numbers[y+1] < numbers[y])
+                    if (numbers[y + 1] < numbers[y])
                     {
+                        Console.WriteLine($"{numbers[y + 1]} = {numbers[y]}");
+
                         temp = numbers[y];
                         numbers[y] = numbers[y + 1];
                         numbers[y + 1] = temp;

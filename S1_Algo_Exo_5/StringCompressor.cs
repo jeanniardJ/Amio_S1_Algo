@@ -42,7 +42,7 @@ namespace S1_Algo_Exo_5
             Console.WriteLine(valueFind);
         }
 
-        // défintioon de la fonction, correction
+        // défintion de la fonction, correction
         string Compression(string chaine)
         {
             string res = ""; //Variable de resultat
