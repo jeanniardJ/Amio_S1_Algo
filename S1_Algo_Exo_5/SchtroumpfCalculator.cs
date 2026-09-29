@@ -9,6 +9,7 @@ namespace S1_Algo_Exo_5
     internal class SchtroumpfCalculator
     {
         public static void CalculateSchtroumpf() {
+
             int[] tableA = { 4, 8, 7, 12 };
             int[] tableB = { 3, 6 };
             int somme = 0;
@@ -18,10 +19,12 @@ namespace S1_Algo_Exo_5
                 for (int y = 0;  y < tableB.Length; y++)
                 {
                     somme += tableA[i] * tableB[y];
-                    Console.WriteLine($"Calcul de la multiplication est {somme} = {tableA[i]} * {tableB[y]} donc le resultat est {tableA[i] * tableB[y]}");
+                    //Console.WriteLine($"Calcul de la multiplication est {somme} = {tableA[i]} * {tableB[y]} donc le resultat est {tableA[i] * tableB[y]}");
+
+                    Console.Write($"{tableA[i]} * {tableB[y]}{(y == tableB.Length - 1 ? "": " + ")}");
                 }
             }
-            Console.WriteLine($"La somme des calculs est {somme}");
+            Console.WriteLine($" = {somme}");
         }
     }
 }

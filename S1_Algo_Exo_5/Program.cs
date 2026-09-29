@@ -18,13 +18,13 @@
             //Console.WriteLine("\n");
             //FibonacciSequenceGenerator.GenerateFibonacciSequence();
             //Console.WriteLine("\n");
-            //SchtroumpfCalculator.CalculateSchtroumpf();
+            SchtroumpfCalculator.CalculateSchtroumpf();
             //Console.WriteLine("\n");
             //Console.WriteLine($"{PalindromeChecker.ReverseString("Bonjour")}");
             //Console.WriteLine($"{(PalindromeChecker.EstPalindrome("Bonjour") ? "Ce mot est un palindrome" : "Ce mot n'est pas un palindrome")}");
             Console.WriteLine("\n");
-            StringCompressor.CompressString("AAAJSJJAKAKKSAK");
-            Console.WriteLine("\n");
+            //StringCompressor.CompressString("AAAJSJJAKAKKSAK");
+            //Console.WriteLine("\n");
             //CaesarCipher.EncryptMessage("bonjour et bienvenu en algo, les animaux sont dans un zoo", 3);
             //Console.WriteLine("\n");
             //BubbleSort.SortArray();
