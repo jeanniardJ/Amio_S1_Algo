@@ -8,13 +8,12 @@ namespace S1_Algo_Exo_5
 {
     internal class CaesarCipher
     {
-        public static void EncryptMessage(string message, int decalage)
+        public static void EncryptMessage(string message, int decalage, bool right = true)
         {
-            char[] alphabet = {
-                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-            };
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
 
             int sizeMessage = message.Length;
+
             char[] convertMessage = new char[sizeMessage];
 
             //il faut prendre le message lettre par lettre, puis décaler les lettres en fonction du décalage demander
@@ -30,16 +29,18 @@ namespace S1_Algo_Exo_5
                 {
                     if (message[i] == alphabet[j])
                     {
-                        //Attention si 'z' revenir au debut de l'aphabet. Si arriver à l'index 23, revenir au debut du tableau
+                        //Attention si 'z' revenir au debut de l'aphabet. Si arriver à l'index 25, revenir au debut du tableau
                         //Attention decaler vers la gauche inverser la problematique
-                        if (j + decalage-1 > 23)
-                        {
-                            convertMessage[i] = alphabet[decalage-1];
-                        }
-                        else
-                        {
-                            convertMessage[i] = alphabet[j + decalage];
-                        }
+                        //if (j + decalage-1 > 24)
+                        //{
+                        //    convertMessage[i] = alphabet[decalage-1];
+                        //}
+                        //else
+                        //{
+                        //    convertMessage[i] = alphabet[j + decalage];
+                        //}
+
+                        convertMessage[i] = right ? alphabet[(j + decalage) % alphabet.Length] : alphabet[(alphabet.Length - Math.Abs(j - decalage)) % alphabet.Length];
                     }
                     else if (message[i] == ' ')
                     {
@@ -51,6 +52,7 @@ namespace S1_Algo_Exo_5
                     }
                 }
             }
+
             Console.WriteLine($"Le message devient : {new String(convertMessage)}");
         }
     }

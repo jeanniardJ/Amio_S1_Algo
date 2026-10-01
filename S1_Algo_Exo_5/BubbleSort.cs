@@ -18,7 +18,7 @@ namespace S1_Algo_Exo_5
         {
             Random random = new Random();
 
-            int[] numbers = Enumerable.Range(1, 50)
+            int[] numbers = Enumerable.Range(1, 10000)
             .OrderBy(x => random.Next())
             .ToArray();
 
@@ -41,10 +41,7 @@ namespace S1_Algo_Exo_5
                 }
             }
 
-            foreach (var item in numbers)
-            {
-                Console.WriteLine($"{item}");
-            }
+            Console.WriteLine(string.Join(", ", numbers));
 
         }
     }
