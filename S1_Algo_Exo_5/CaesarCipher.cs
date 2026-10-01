@@ -14,7 +14,7 @@ namespace S1_Algo_Exo_5
 
             int sizeMessage = message.Length;
 
-            char[] convertMessage = new char[sizeMessage];
+            string convertMessage = "";
 
             //il faut prendre le message lettre par lettre, puis décaler les lettres en fonction du décalage demander
             //Si la lettre est 'e' la décaler de 3 est donne 'h'
@@ -25,8 +25,11 @@ namespace S1_Algo_Exo_5
             {
                 //On parcourt le message lettre par lettre 
                 //On chercher la lettre correspondant dans le tableau, si match on recuper l'index
+                bool decal = false;
+
                 for (int j = 0; j < alphabet.Length; j++)
                 {
+                    
                     if (message[i] == alphabet[j])
                     {
                         //Attention si 'z' revenir au debut de l'aphabet. Si arriver à l'index 25, revenir au debut du tableau
@@ -40,17 +43,13 @@ namespace S1_Algo_Exo_5
                         //    convertMessage[i] = alphabet[j + decalage];
                         //}
 
-                        convertMessage[i] = right ? alphabet[(j + decalage) % alphabet.Length] : alphabet[(alphabet.Length - Math.Abs(j - decalage)) % alphabet.Length];
+                        convertMessage += right ? alphabet[(j + decalage) % alphabet.Length] : alphabet[(alphabet.Length - Math.Abs(j - decalage)) % alphabet.Length];
                     }
-                    else if (message[i] == ' ')
-                    {
-                        convertMessage[i] = ' ';
-                    }
-                    else if (message[i] == ',')
-                    {
-                        convertMessage[i] = ',';
-                    }
+
+                    
                 }
+
+                if (!decal) { convertMessage += message[i]; }
             }
 
             Console.WriteLine($"Le message devient : {new String(convertMessage)}");
