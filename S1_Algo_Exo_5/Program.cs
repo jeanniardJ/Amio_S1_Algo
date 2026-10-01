@@ -25,7 +25,7 @@
             //Console.WriteLine("\n");
             //StringCompressor.CompressString("AAAJSJJAKAKKSAK");
             Console.WriteLine("\n");
-            CaesarCipher.EncryptMessage("bonjour et bienvenu en algo, les animaux sont dans un zoo", 3, false);
+            CaesarCipher.EncryptMessage("bonjour et bienvenu en algo, les animaux sont dans un zoo", 3, true);
             //Console.WriteLine("\n");
             //BubbleSort.SortArray();
             //Console.WriteLine("\n");

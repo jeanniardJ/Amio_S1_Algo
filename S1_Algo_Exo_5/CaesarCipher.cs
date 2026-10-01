@@ -16,10 +16,10 @@ namespace S1_Algo_Exo_5
 
             string convertMessage = "";
 
-            //il faut prendre le message lettre par lettre, puis décaler les lettres en fonction du décalage demander
+            //Il faut prendre le message lettre par lettre, puis décaler les lettres en fonction du décalage demander
             //Si la lettre est 'e' la décaler de 3 est donne 'h'
             //Il faut parcourir le message, recuperer le caracter est le décaler de 3 exemple 'a' devient 'd'. Si 'z' revenir à zero 'c'.
-            //L'aphabet est de 24 caractére. Et penser à gere les espace qui reste des espaces
+            //L'aphabet est de 26 caractéres. Et penser à gere les espace qui reste des espaces
 
             for (int i = 0; i < sizeMessage; i++)
             {
@@ -46,7 +46,6 @@ namespace S1_Algo_Exo_5
                         convertMessage += right ? alphabet[(j + decalage) % alphabet.Length] : alphabet[(alphabet.Length - Math.Abs(j - decalage)) % alphabet.Length];
                     }
 
-                    
                 }
 
                 if (!decal) { convertMessage += message[i]; }
